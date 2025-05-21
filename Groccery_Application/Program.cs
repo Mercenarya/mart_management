@@ -16,7 +16,7 @@ namespace Groccery_Application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homepage());
+            Application.Run(new saleform());
         }
     }
 }

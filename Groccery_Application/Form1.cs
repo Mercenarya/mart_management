@@ -15,7 +15,12 @@ namespace Groccery_Application
 {
     public partial class Form1 : Form
     {
+        
         MainConnection con = new MainConnection();
+        private string usr;
+
+        public string Usr { get => usr; set => usr = value; }
+
         public  Form1()
         {
             InitializeComponent();
@@ -53,6 +58,7 @@ namespace Groccery_Application
             if (kq)
             {
                 Homepage home = new Homepage();
+                home.Tennv = username_txt.Text;
                 home.Show();
                 this.Hide();
             }

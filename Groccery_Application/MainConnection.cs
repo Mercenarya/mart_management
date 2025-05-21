@@ -40,7 +40,15 @@ namespace Groccery_Application
             rd.Close();
             return rows;
         }
-        
+        public DataTable getTBdata(string sql)
+        {
+            
+            DataTable dt = new DataTable();
+            open_connection();
+            SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+            da.Fill(dt);
+            return dt;
+        }
     }
 }
 
